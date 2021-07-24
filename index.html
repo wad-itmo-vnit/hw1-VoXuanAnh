@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale = 1.0">
+    <title>VO XUAN ANH - N41512c</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<html>
+
+<body>
+    <div id="header">
+        <p>
+            Võ Xuân Anh
+        </p>
+    </div>  
+    <div id="gallery">
+        <div class="box" id="0">
+            <a href="#pop_up"><img src="images/snapfire.jpg" class="image">
+                <div class="hover_box"></div>
+                <div class="hover_text">Chị</div>
+            </a>
+
+        </div>
+
+        <div class="box" id="1">
+            <img src="images/voidspirit.jpg" class="image">
+                <div class="hover_box"></div>
+                <div class="hover_text">ong</div>
+            </a>
+
+        </div>
+        <div class="box" id="2">
+            <img src="images/emberspirit.jpg" class="image">
+                <div class="hover_box"></div>
+                <div class="hover_text">nâu</div>
+
+            </a>
+        </div>
+
+        <div class="box" id="3">
+            <img src="images/stormspirit.jpg" class="image">
+                <div class="hover_box"></div>
+                <div class="hover_text">nấu</div>
+            </a>
+        </div>
+        <div class="box" id="4">
+            <a href="https://google.com"><img src="images/alchemist.jpg" class="image">
+                <div class="hover_box"></div>
+                <div class="hover_text">nâu</div>
+            </a>
+        </div>
+        <div class="box" id="5">
+            <img src="images/am.jpg" class="image">
+                <div class="hover_box"></div>
+                <div class="hover_text">nấu</div>
+            </a>
+        </div>
+        <div class="box" id="6">
+            <img src="images/earthspirit.jpg" class="image">
+                <div class="hover_box"></div>
+                <div class="hover_text">nầu</div>
+            </a>
+        </div>
+        <div class="box" id="7">
+            <img src="images/invoker.jpg" class="image">
+                <div class="hover_box"></div>
+                <div class="hover_text">nâu !</div>
+            </a>
+        </div>
+        <div class="box" id="8">
+            <img src="images/lina.jpg" class="image">
+                <div class="hover_box"></div>
+                <div class="hover_text">Chị</div>
+            </a>
+        </div>
+        <div class="box" id="9">
+            <img src="images/luna.jpg" class="image">
+                <div class="hover_box"></div>
+                <div class="hover_text">bay</div>
+            </a>
+        </div>
+        <div class="box" id="10">
+            <img src="images/mars.jpg" class="image">
+                <div class="hover_box"></div>
+                <div class="hover_text">đi</div>
+            </a>
+        </div>
+        <div class="box" id="11">
+            <img src="images/monkeyking.jpg" class="image">
+                <div class="hover_box"></div>
+                <div class="hover_text">đâu</div>
+            </a>
+        </div>
+        <div class="box" id="12">
+            <img src="images/ogre.jpg" class="image">
+                <div class="hover_box"></div>
+                <div class="hover_text">đi</div>
+            </a>
+        </div>
+        <div class="box" id="13">
+            <img src="images/pa.jpg" class="image">
+                <div class="hover_box"></div>
+                <div class="hover_text">đâu</div>
+            </a>
+        </div>
+        <div class="box" id="14">
+            <img src="images/silencer.jpg" class="image">
+                <div class="hover_box"></div>
+                <div class="hover_text">về</div>
+            </a>
+        </div>
+        <div class="box" id="15">
+            <img src="images/tide.jpg" class="image">
+                <div class="hover_box"></div>
+                <div class="hover_text">đâu?</div>
+            </a>
+        </div>
+    </div>
+    
+
+
+    <script>
+        box_elements = document.getElementsByClassName("box");
+        image_elements = document.getElementsByClassName("image");
+        hover_box_elements = document.getElementsByClassName("hover_box");
+        hover_text_elements = document.getElementsByClassName("hover_text")
+        for (var i = 0; i < box_elements.length; i++){
+            box_elements[i].addEventListener("mouseenter", e => {
+                id = e.target.id
+                image_elements[id].style.opacity = 0.1;
+                hover_box_elements[id].style.opacity = 1;
+                hover_text_elements[id].style.opacity = 1;
+            })
+            box_elements[i].addEventListener("mouseleave", e => {
+                id = e.target.id
+                image_elements[id].style.opacity = 1;
+                hover_box_elements[id].style.opacity = 0;
+                hover_text_elements[id].style.opacity = 0;
+            })
+        }
+    </script>
+
+</body>
+</html>
