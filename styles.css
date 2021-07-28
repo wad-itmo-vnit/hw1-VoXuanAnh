@@ -2,13 +2,15 @@ html {
     font-family: 'Dancing Script', cursive;
 }
 body{
-    /* background-color:rgba(173, 170, 170, 0.7); */
+    background-color:rgba(170, 170, 170, 0.5);
     background-image: url("images/dota.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
+    min-height: 100vh;
 }
 p{
+    text-shadow: black 5px 5px 10px;
     font-style: italic;
     font-weight: bold;
     text-align: center;
@@ -19,13 +21,12 @@ p{
 
 #header {
     width: 100%;
-    padding: 70px 0px 70px 0px;
+    padding: 20px 0px 20px 0px;
     border: 10px red;
-    /* position: sticky; */
     margin: 0;
-    /* background-color: rgb(173, 170, 170); */
     top: 0;
     z-index: 2;
+    border-radius: 30px;
 }
 
 #gallery{
@@ -40,6 +41,7 @@ p{
 }
 
 .box {
+    cursor: pointer;
     position: relative;
     padding: 0;
     margin: 0;
@@ -81,6 +83,37 @@ img {
     font-size: 30px;
     font-weight: 900;
     color: yellow;
+}
+
+#modal-wrap{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+}
+
+#modal-box{
+    height: 40%;
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    align-items: center;
+    display: none;
+    justify-content: center;
+    cursor: default;
+    flex-direction: column;
+}
+
+.modal-image {
+    border: 5px solid gray;
+    max-width: 100%;
+    max-height: 100%;
+    margin: 0 auto;
+    height: auto;
+}
+.desc{
+    font-size: 50px;
 }
 
 @media only screen and (max-width: 940px){
