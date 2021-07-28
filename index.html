@@ -133,13 +133,13 @@
             box_elements[i].addEventListener("click", e => {
                 let id = e.currentTarget.id;
                 img = e.currentTarget.querySelector('img');
-                console.log(id);
                 modal = document.getElementById('modal-box');
                 modal.style.display = "flex";
                 modal.innerHTML = `<img src="images/dota${id}.jpg" class="modal-image"><p class="desc">${img.alt}</p>`
                 document.getElementById('gallery').style.display = "none";
                 header.innerHTML = "<p>Hero Portrait</p>";
                 header.style.position="fixed";
+                modal_wrap.style.cursor = "pointer";
             })
         }
         function reverseChange() {
@@ -148,10 +148,10 @@
             document.getElementById('gallery').style.display = "flex";
             header.innerHTML = "<p>Võ Xuân Anh</p>";
             header.style.position="static";
+            modal_wrap.style.cursor = "default";
         }
         modal_wrap.addEventListener('click', function(event) {
             var isClickInside = modal.contains(event.target);
-            console.log(isClickInside)
             if (isClickInside) {         
             }
             else{   
